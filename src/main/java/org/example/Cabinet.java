@@ -113,7 +113,7 @@ public class Cabinet {
             if (email.equals("0")) {
                 return;
             }
-            if(tekshirish(email)){
+            if(tekshirish(email)&&email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")){
                 DB.USERS.get(chosenUser).setGmail(email);
                 System.out.println("Gmail Edited");
                 return;
